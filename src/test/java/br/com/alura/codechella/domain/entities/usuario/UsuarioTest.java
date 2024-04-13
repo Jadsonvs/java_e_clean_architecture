@@ -26,7 +26,7 @@ public class UsuarioTest {
 
         Assertions.assertEquals("Lorena", usuario.getNome());
 
-        usuario = fabrica.incluEndereco("12345-444", 607, "apto 09");
+        usuario = fabrica.incluirEndereco("12345-444", 607, "apto 09");
 
         Assertions.assertEquals("apto 09", usuario.getEndereco().getComplemento());
     }
