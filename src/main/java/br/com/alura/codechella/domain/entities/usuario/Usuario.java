@@ -1,5 +1,7 @@
 package br.com.alura.codechella.domain.entities.usuario;
 
+import br.com.alura.codechella.domain.Endereco;
+
 import java.time.LocalDate;
 
 public class Usuario {
@@ -11,6 +13,8 @@ public class Usuario {
 
     private String email;
 
+    private Endereco endereco;
+
     public Usuario(String cpf, String nome, String email, LocalDate nascimento) {
         if(cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
             throw new IllegalArgumentException("Cpf no padrão incorreto!");
@@ -20,6 +24,14 @@ public class Usuario {
         this.nome = nome;
         this.email = email;
         this.nascimento = nascimento;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 
     public String getCpf() {
