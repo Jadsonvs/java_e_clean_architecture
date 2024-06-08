@@ -5,6 +5,7 @@ import br.com.alura.codechella.domain.Endereco;
 import java.time.LocalDate;
 
 public record UsuarioDto(
+        Long id,
 
          String cpf,
 

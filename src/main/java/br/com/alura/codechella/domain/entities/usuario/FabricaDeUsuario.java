@@ -8,8 +8,8 @@ public class FabricaDeUsuario {
 
     private Usuario usuario;
 
-    public Usuario comNomeCpfNascimento(String nome, String cpf, LocalDate nascimento) {
-        this.usuario = new Usuario(cpf, nome, "", nascimento);
+    public Usuario comNomeCpfNascimento(Long id, String nome, String cpf, LocalDate nascimento) {
+        this.usuario = new Usuario(id, cpf, nome, "", nascimento);
         return this.usuario;
     }
 

@@ -23,6 +23,17 @@ public class RepositorioDeUsuarioEmArquivo implements RepositorioDeUsuario {
         return this.usuarios;
     }
 
+    @Override
+    public void excluirUsuario(Long id) {
+
+    }
+
+    @Override
+    public Usuario atualizarUsuario(Usuario usuario) {
+        this.usuarios.add(usuario);
+        return usuario;
+    }
+
     public void gravaEmArquivo(String nomeArquivo) {
         FileWriter fileWrite = null;
         try {

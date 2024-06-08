@@ -10,13 +10,13 @@ public class UtilizaUsuarioComArquivos {
     public static void main(String[] args) {
         RepositorioDeUsuarioEmArquivo repositorioDeUsuarioEmArquivo = new RepositorioDeUsuarioEmArquivo();
 
-        repositorioDeUsuarioEmArquivo.cadastrarUsuario(new Usuario("123.456.789-01", "Jadson Santos",
+        repositorioDeUsuarioEmArquivo.cadastrarUsuario(new Usuario(1L,"123.456.789-01", "Jadson Santos",
                 "santos@email.com", LocalDate.parse("1994-04-12")));
-        repositorioDeUsuarioEmArquivo.cadastrarUsuario(new Usuario("123.456.789-02", "Carol Martins",
+        repositorioDeUsuarioEmArquivo.cadastrarUsuario(new Usuario(1L,"123.456.789-02", "Carol Martins",
                 "carol@email.com", LocalDate.parse("1994-04-12")));
-        repositorioDeUsuarioEmArquivo.cadastrarUsuario(new Usuario("123.456.789-03", "Jefferson Amador",
+        repositorioDeUsuarioEmArquivo.cadastrarUsuario(new Usuario(1L,"123.456.789-03", "Jefferson Amador",
                 "jefferson@email.com", LocalDate.parse("1994-04-12")));
-        repositorioDeUsuarioEmArquivo.cadastrarUsuario(new Usuario("123.456.789-04", "adriana Viana",
+        repositorioDeUsuarioEmArquivo.cadastrarUsuario(new Usuario(1L,"123.456.789-04", "adriana Viana",
                 "adriana@email.com", LocalDate.parse("1994-04-12")));
 
 //        System.out.println(repositorioDeUsuarioEmArquivo.listarTodos());

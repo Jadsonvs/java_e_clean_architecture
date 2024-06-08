@@ -5,6 +5,8 @@ import br.com.alura.codechella.domain.Endereco;
 import java.time.LocalDate;
 
 public class Usuario {
+    private Long id;
+
     private String cpf;
 
     private String nome;
@@ -15,15 +17,23 @@ public class Usuario {
 
     private Endereco endereco;
 
-    public Usuario(String cpf, String nome, String email, LocalDate nascimento) {
+    public Usuario(Long id, String cpf, String nome, String email, LocalDate nascimento) {
         if(cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
             throw new IllegalArgumentException("Cpf no padrão incorreto!");
         }
-
+        this.id = id;
         this.cpf = cpf;
         this.nome = nome;
         this.email = email;
         this.nascimento = nascimento;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Endereco getEndereco() {

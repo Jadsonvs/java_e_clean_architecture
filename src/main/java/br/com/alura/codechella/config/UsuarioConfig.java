@@ -1,7 +1,9 @@
 package br.com.alura.codechella.config;
 
 import br.com.alura.codechella.application.gateways.RepositorioDeUsuario;
-import br.com.alura.codechella.application.usecases.CadastrarUsuarioUseCase;
+import br.com.alura.codechella.application.usecases.AtualizarUsuario;
+import br.com.alura.codechella.application.usecases.CadastrarUsuario;
+import br.com.alura.codechella.application.usecases.ExcluirUsuario;
 import br.com.alura.codechella.application.usecases.ListarUsuarios;
 import br.com.alura.codechella.infra.gateways.RepositorioDeUsuarioJpa;
 import br.com.alura.codechella.infra.gateways.UsuarioEntityMapper;
@@ -13,8 +15,8 @@ import org.springframework.context.annotation.Configuration;
 public class UsuarioConfig {
 
     @Bean
-    CadastrarUsuarioUseCase cadastrarUsuario(RepositorioDeUsuario repositorioDeUsuario) {
-        return new CadastrarUsuarioUseCase(repositorioDeUsuario);
+    CadastrarUsuario cadastrarUsuario(RepositorioDeUsuario repositorioDeUsuario) {
+        return new CadastrarUsuario(repositorioDeUsuario);
     }
 
     @Bean
@@ -30,6 +32,15 @@ public class UsuarioConfig {
     @Bean
     UsuarioEntityMapper retornaMapper() {
         return new UsuarioEntityMapper();
+    }
+
+    @Bean
+    ExcluirUsuario excluir(RepositorioDeUsuario repositorioDeUsuario) {
+        return new ExcluirUsuario(repositorioDeUsuario);
+    }
+    @Bean
+    AtualizarUsuario atualizar(RepositorioDeUsuario repositorioDeUsuario) {
+        return new AtualizarUsuario(repositorioDeUsuario);
     }
 
 }

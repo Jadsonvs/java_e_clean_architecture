@@ -33,4 +33,17 @@ public class RepositorioDeUsuarioJpa implements RepositorioDeUsuario {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public void excluirUsuario(Long id) {
+        repositorio.deleteById(id);
+    }
+
+    @Override
+    public Usuario atualizarUsuario(Usuario usuario) {
+        UsuarioEntity entity = mapper.toEntity(usuario);
+        repositorio.save(entity);
+        return mapper.toDomain(entity);
+    }
+
+
 }

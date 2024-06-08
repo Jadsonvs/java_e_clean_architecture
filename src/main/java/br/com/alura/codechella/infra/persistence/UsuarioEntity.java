@@ -21,7 +21,8 @@ public class UsuarioEntity {
 
     public UsuarioEntity() {}
 
-    public UsuarioEntity(String cpf, String nome, LocalDate nascimento, String email) {
+    public UsuarioEntity(Long id, String cpf, String nome, LocalDate nascimento, String email) {
+        this.id = id;
         this.cpf = cpf;
         this.nome = nome;
         this.nascimento = nascimento;

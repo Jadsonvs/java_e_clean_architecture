@@ -12,4 +12,8 @@ public interface RepositorioDeUsuario {
 
     List<Usuario> listarTodos();
 
+    void excluirUsuario(Long id);
+
+    Usuario atualizarUsuario(Usuario usuario);
+
 }
